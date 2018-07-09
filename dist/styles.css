@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);.Icon {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.Icon__image {
+  width: 100%; }
+.CircleBadge:focus, .CircleBadge:active, .CircleBadge:focus-within {
+  outline: none; }
+  .a11y-mode-enabled .CircleBadge:focus, .a11y-mode-enabled .CircleBadge:active, .a11y-mode-enabled .CircleBadge:focus-within {
+    outline: 3px solid #00a8c2; }
+
+.CircleBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: #c6eff2;
+  background-color: #00a8c2;
+  border: 1px solid #d0d5da; }
+
+.CircleBadge--inactive {
+  color: #d0d5da;
+  background-color: #f2f5f8; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+.VisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+.Feedbacks {
+  border-radius: .3rem;
+  overflow: hidden;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: white; }
+
+.Feedbacks__no-feedback {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; }
+.TextField {
+  position: relative;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.TextField__inupt {
+  height: 100%;
+  border: 1px solid gray;
+  padding: .5rem;
+  font-size: .8rem; }
+.FeedbacksFilter {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 2rem;
+  height: 2rem; }
+
+.FeedbacksFilter__search {
+  margin-right: 1rem; }
+.Pagination__button:focus, .Pagination__button:active {
+  outline: none; }
+  .a11y-mode-enabled .Pagination__button:focus, .a11y-mode-enabled .Pagination__button:active {
+    outline: 3px solid #00a8c2; }
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #eee; }
+
+.Pagination__button {
+  border: none;
+  font-size: 1.3rem;
+  background: none;
+  padding: 0 2rem;
+  cursor: pointer; }
+  .Pagination__button:disabled {
+    cursor: auto;
+    opacity: .4; }
+
+.Pagination__details {
+  width: 2rem; }
+.Spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #16151a; }
+
+.Spinner__icon {
+  width: 30rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+.ErrorMessage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #16151a; }
+
+.ErrorMessage__message {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  color: red; }
+
+.ErrorMessage__gif {
+  position: absolute;
+  transform: translate(-50%, -150%);
+  top: 50%;
+  left: 50%; }
+
+.ErrorMessage__icon {
+  width: 5rem;
+  transform: translate(-50%, -50%);
+  top: calc(50% - 9rem);
+  left: 50%;
+  position: absolute; }
+.RatingFilter {
+  margin-right: .5rem; }
+
+.RatingFilter__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
+
+.RatingFilter__checkbox {
+  display: none; }
+.Usabilla__dashboard {
+  background-color: #eef3f7;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  max-width: 120rem;
+  padding: 2rem 6rem;
+  min-height: 85vh; }
+  @media screen and (max-width: 785px) {
+    .Usabilla__dashboard {
+      padding-right: 1rem;
+      padding-left: 1rem; } }
+
+.Usabilla__header {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.Usabilla__title {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem; }
+.RatingsFilter {
+  border: none; }
+
+.RatingsFilter__container {
+  display: flex; }
+.FeedbackItem {
+  background-color: white; }
+  .FeedbackItem:not(:last-child) {
+    border-bottom: 1px solid #e2e4e4; }
+
+.FeedbackItem__Header {
+  color: #c6ced3;
+  background-color: #59636b;
+  justify-content: flex-start; }
+
+.FeedbackItem__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+
+.FeedbackItem__cell {
+  flex: 1;
+  padding: 1.5rem;
+  color: #9ca1a1; }
+  .FeedbackItem__cell:not(.FeedbackItem__cell--comment) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+  @media screen and (max-width: 785px) {
+    .FeedbackItem__cell {
+      padding: 1.5rem .5rem; } }
