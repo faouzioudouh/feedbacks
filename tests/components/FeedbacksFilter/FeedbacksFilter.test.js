@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import FeedbacksFilter from '../../../src/components/FeedbacksFilter/FeedbacksFilter';
 import TextField from '../../../src/components/TextField';
-import RatingsFilter from '../../../src/components/FeedbacksFilter/RatingsFilter';
+import FilterItems from '../../../src/components/FeedbacksFilter/FilterItems';
 
 describe('component/FeedbacksFilter', () => {
     const props = {
@@ -12,9 +12,9 @@ describe('component/FeedbacksFilter', () => {
             value: "",
             onChange: jest.fn(),
         },
-        ratingsFilterProps: {
-            ratings: [1, 2, 3, 4, 5],
-            activeRatings: [],
+        FilterItemsProps: {
+            itens: [1, 2, 3, 4, 5],
+            activeItems: [],
             onClick: jest.fn(),
         },
     };
@@ -25,9 +25,9 @@ describe('component/FeedbacksFilter', () => {
         expect(wrapper.find(TextField).props()).toEqual(props.searchInputProps);
     });
 
-    it('should render RatingsFilter with the correct props', () => {
+    it('should render FilterItems with the correct props', () => {
         const wrapper = shallow(<FeedbacksFilter  {...props} />);
-        expect(wrapper.find(RatingsFilter).exists()).toBe(true);
-        expect(wrapper.find(RatingsFilter).props()).toEqual(props.ratingsFilterProps);
+        expect(wrapper.find(FilterItems).length).toBe(2);
+        expect(wrapper.find(FilterItems).first().props()).toEqual(props.FilterItemsProps);
     });
 });

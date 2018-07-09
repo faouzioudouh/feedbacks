@@ -3,36 +3,37 @@ import classnames from 'classnames';
 import Types from '../../../Types';
 import CircleBadge from '../../CircleBadge';
 
-import "./RatingFilter.scss";
+import "./FilterItem.scss";
 
 /**
- * @desc RatingFilter stateless component to render the rating
+ * @desc FilterItem stateless component to render the rating
  * label and checkbox to filter the feedbacks based on ratings values!
  * @param {React.Props<Object>} Props
  * @returns {React.Component}
  */
-const RatingFilter = ({
-  rating,
+const FilterItem = ({
+  item,
   isActive,
   onClick,
+  a11yLabel,
 }) => (
-  <div className="RatingFilter">
+  <div className="FilterItem">
     <CircleBadge
-        key={rating}
+        key={item}
         className={classnames({'CircleBadge--inactive': !isActive})}>
-        <label className="RatingFilter__label">
+        <label className="FilterItem__label">
           <input className="VisuallyHidden" type="checkbox" checked={isActive} onClick={onClick} />
-          <span aria-hidden="true">{rating}</span>
-          <span className="VisuallyHidden">Filter feedbacks by rating {rating}</span>
+          <span aria-hidden="true">{item}</span>
+          <span className="VisuallyHidden">Filter feedbacks by {a11yLabel} {item}</span>
         </label>
     </CircleBadge>
   </div>
 );
 
-RatingFilter.propTypes = {
+FilterItem.propTypes = {
   rating: Types.number,
   isActive: Types.bool,
   onClick: Types.func,
 };
 
-export default RatingFilter;
+export default FilterItem;

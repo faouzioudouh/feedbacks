@@ -17,7 +17,7 @@ describe('component/FeedbacksFilterContainer', () => {
 
     beforeEach(() => {
         props.render.mockReset();
-    })
+    });
 
     it('should render the FeedbacksFilter with correct props', () => {
         const wrapper = shallow(<FeedbacksFilterContainer  {...props} />);
@@ -29,11 +29,9 @@ describe('component/FeedbacksFilterContainer', () => {
             onChange: wrapper.instance().onSearchChange
         });
 
-        expect(wrapper.find(FeedbacksFilter).prop('ratingsFilterProps')).toEqual({
-            ratings: [1, 2, 3, 4, 5],
-            activeRatings: [],
-            onClick: wrapper.instance().onRatingClick
-        });
+        expect(wrapper.find(FeedbacksFilter).prop('FilterItemsProps').a11yLabel).toEqual('Rating');
+        expect(wrapper.find(FeedbacksFilter).prop('FilterItemsProps').items).toEqual([1, 2, 3, 4, 5]);
+        expect(wrapper.find(FeedbacksFilter).prop('FilterItemsProps').activeItems).toEqual([]);
     });
 
 
@@ -41,13 +39,6 @@ describe('component/FeedbacksFilterContainer', () => {
         shallow(<FeedbacksFilterContainer  {...props} />);
 
         expect(props.render).toBeCalledWith(props.feedbacks);
-    });
-
-    it('should filter feedbacks by ratings, on ratings button click', () => {
-        const wrapper = shallow(<FeedbacksFilterContainer  {...props} />);
-        props.render.mockReset();
-        wrapper.instance().onRatingClick(1);
-        expect(props.render).toBeCalledWith([props.feedbacks[0]]);
     });
 
     it('should filter feedbacks by comment, on search change', () => {

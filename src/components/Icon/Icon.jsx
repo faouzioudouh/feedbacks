@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import Types from '../../Types';
 import "./Icon.scss";
 
@@ -12,7 +13,7 @@ const Icon =  ({
     className,
 }) => {
     return (
-      <div className={`Icon ${className}`}>
+      <div className={classnames('Icon',className)}>
         <img className="Icon__image" src={require(`../../assets/icons/${name}.svg`)} alt={name} />
       </div>
     );

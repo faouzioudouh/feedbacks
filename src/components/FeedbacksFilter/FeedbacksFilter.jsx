@@ -1,7 +1,7 @@
 import React from 'react';
 import Types from '../../Types';
 import TextField from '../TextField';
-import RatingsFilter from './RatingsFilter/RatingsFilter';
+import FilterItems from './FilterItems';
 
 import "./FeedbacksFilter.scss";
 
@@ -12,14 +12,18 @@ import "./FeedbacksFilter.scss";
  */
 const FeedbacksFilter = ({
   searchInputProps,
-  ratingsFilterProps,
+  FilterItemsProps,
+  devicesFilterProps,
 }) => {
   return (<div className="FeedbacksFilter">
     <div className="FeedbacksFilter__search">
       <TextField {...searchInputProps} />
     </div>
     <div className="FeedbacksFilter__rating">
-      <RatingsFilter {...ratingsFilterProps} />
+      <FilterItems {...FilterItemsProps} />
+    </div>
+    <div className="FeedbacksFilter__device">
+      <FilterItems {...devicesFilterProps} />
     </div>
   </div>);
 };
@@ -30,11 +34,8 @@ FeedbacksFilter.propTypes = {
     placeholder: Types.string,
     onChange: Types.func,
   }),
-  ratingsFilterProps: Types.shape({
-    availableRatings: Types.arrayOf(Types.number),
-    ratings: Types.arrayOf(Types.number),
-    onClick: Types.func,
-  }),
+  FilterItemsProps: Types.Filter,
+  devicesFilterProps: Types.Filter,
 };
 
 export default FeedbacksFilter;

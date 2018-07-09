@@ -1,8 +1,8 @@
-.RatingFilter {
+.FilterItem {
     margin-right: .5rem;
 }
 
-.RatingFilter__label {
+.FilterItem__label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,6 @@
     cursor: pointer;
 }
 
-.RatingFilter__checkbox {
+.FilterItem__checkbox {
     display: none;
 }

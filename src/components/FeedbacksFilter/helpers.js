@@ -1,4 +1,4 @@
-import { highlightKeyword } from '../../helpers';
+import { highlightKeyword, isMobile } from '../../helpers';
 
 /**
  * @desc Highlights the given keyword in the given feedback (comment).
@@ -26,21 +26,28 @@ const isKeywordInComment = keyword => feedback =>
  * @param {Array} activeRatings: search ratings.
  * @returns {Array} filtered feedbacks
  */
-export const filterFeedbacks = feedbacks => (search, activeRatings) => {
+export const filterFeedbacks = feedbacks => ({ search, ratings, devices }) => {
     let filteredFeedbacks = [...feedbacks];
 
-    // If search filter
+    if (devices.length) {
+        filteredFeedbacks = filteredFeedbacks
+            .filter(({ browser }) => {
+                return (devices.includes('mobile') && isMobile(browser.userAgent)) ||
+                (devices.includes('desktop') && !isMobile(browser.userAgent));
+            });
+    }
+
+    if (ratings.length) {
+        filteredFeedbacks = filteredFeedbacks
+            .filter(({ rating }) => ratings.includes(rating));
+    }
+
     if (search) {
         filteredFeedbacks = filteredFeedbacks
             .filter(isKeywordInComment(search))
             .map(highlightKeywordInComment(search));
     }
 
-    // If ratings filter
-    if (activeRatings.length) {
-        filteredFeedbacks = filteredFeedbacks
-            .filter(({ rating }) => activeRatings.includes(rating));
-    }
 
     return filteredFeedbacks;
 }
