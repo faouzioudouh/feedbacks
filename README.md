@@ -1,4 +1,4 @@
-# Products comparator
+# Feedbacks
 
 * [Live demo](#live-demo)
 * [Install](#how-to-run)
@@ -59,6 +59,9 @@ All the required points are there ;).
 ## Extra points
 
 - [x]   Pagination
+- [x]   Error handling
+- [x]   Api
+- [x]   More for you to explore...
 
 # Structure
 Within each component folder you'll find three files:
