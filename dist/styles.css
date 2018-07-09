@@ -1,9 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);.Icon {
-  width: 1.5rem;
-  height: 1.5rem; }
+@import url(https://fonts.googleapis.com/css?family=Montserrat);.Spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #16151a; }
 
-.Icon__image {
-  width: 100%; }
+.Spinner__icon {
+  width: 30rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+.VisuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
 .CircleBadge:focus, .CircleBadge:active, .CircleBadge:focus-within {
   outline: none; }
   .a11y-mode-enabled .CircleBadge:focus, .a11y-mode-enabled .CircleBadge:active, .a11y-mode-enabled .CircleBadge:focus-within {
@@ -19,24 +39,14 @@
   color: #c6eff2;
   background-color: #00a8c2;
   border: 1px solid #d0d5da; }
+  @media screen and (max-width: 785px) {
+    .CircleBadge {
+      width: 1.5rem;
+      height: 1.5rem; } }
 
 .CircleBadge--inactive {
   color: #d0d5da;
   background-color: #f2f5f8; }
-body {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  margin: 0; }
-
-.VisuallyHidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
 .Feedbacks {
   border-radius: .3rem;
   overflow: hidden;
@@ -60,15 +70,12 @@ body {
   border: 1px solid gray;
   padding: .5rem;
   font-size: .8rem; }
-.FeedbacksFilter {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-bottom: 2rem;
-  height: 2rem; }
+.Icon {
+  width: 1.5rem;
+  height: 1.5rem; }
 
-.FeedbacksFilter__search {
-  margin-right: 1rem; }
+.Icon__image {
+  width: 100%; }
 .Pagination__button:focus, .Pagination__button:active {
   outline: none; }
   .a11y-mode-enabled .Pagination__button:focus, .a11y-mode-enabled .Pagination__button:active {
@@ -93,18 +100,26 @@ body {
 
 .Pagination__details {
   width: 2rem; }
-.Spinner {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #16151a; }
+.Usabilla__dashboard {
+  background-color: #eef3f7;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  max-width: 120rem;
+  padding: 2rem 6rem;
+  min-height: 85vh; }
+  @media screen and (max-width: 785px) {
+    .Usabilla__dashboard {
+      padding-right: 1rem;
+      padding-left: 1rem; } }
 
-.Spinner__icon {
-  width: 30rem;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%; }
+.Usabilla__header {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.Usabilla__title {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem; }
 .ErrorMessage {
   position: fixed;
   width: 100%;
@@ -131,6 +146,21 @@ body {
   top: calc(50% - 9rem);
   left: 50%;
   position: absolute; }
+.FeedbacksFilter {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 2rem; }
+  @media screen and (max-width: 785px) {
+    .FeedbacksFilter {
+      flex-direction: column; } }
+
+.FeedbacksFilter__search {
+  margin-right: 1rem; }
+  @media screen and (max-width: 785px) {
+    .FeedbacksFilter__search {
+      margin-right: 0;
+      margin-bottom: 1rem; } }
 .RatingFilter {
   margin-right: .5rem; }
 
@@ -145,26 +175,6 @@ body {
 
 .RatingFilter__checkbox {
   display: none; }
-.Usabilla__dashboard {
-  background-color: #eef3f7;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  max-width: 120rem;
-  padding: 2rem 6rem;
-  min-height: 85vh; }
-  @media screen and (max-width: 785px) {
-    .Usabilla__dashboard {
-      padding-right: 1rem;
-      padding-left: 1rem; } }
-
-.Usabilla__header {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.Usabilla__title {
-  display: flex;
-  justify-content: center;
-  margin-left: 1rem; }
 .RatingsFilter {
   border: none; }
 
@@ -196,4 +206,5 @@ body {
     text-align: center; }
   @media screen and (max-width: 785px) {
     .FeedbackItem__cell {
-      padding: 1.5rem .5rem; } }
+      padding: 1.5rem .3rem;
+      font-size: .7rem; } }
