@@ -54,10 +54,11 @@ All the required points are there ;).
 - [x]   Use comment and rating filters to filter feedback items.
 - [x]   Make the application as responsive as possible for mobile phones, tablets, and desktops.
 - [x]   Match the provided design below as close as possible.
-- [x]   Do something creative with the extra data provided in the JSON file.
+- [x]   Do something creative with the extra data provided in the JSON file. (World Graph)
 
 ## Extra points
 
+- [x]   World Graph (Feedbacks and ratings average by country)
 - [x]   Pagination
 - [x]   Error handling
 - [x]   Api
