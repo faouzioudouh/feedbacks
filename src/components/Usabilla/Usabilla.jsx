@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Types from '../../Types';
 import Feedbacks from '../Feedbacks';
 import FeedbacksFilter from '../FeedbacksFilter';
+import Graph from '../Graph';
 import Icon from '../Icon';
 
 import "./Usabilla.scss";
@@ -24,7 +25,10 @@ const Usabilla = ({
           feedbacks={feedbacks}
           render={
             filteredFeedbacks =>
-              <Feedbacks feedbacks={filteredFeedbacks} />
+              <div className="Usabilla__feedbacks-and-graph">
+                <Graph feedbacks={filteredFeedbacks} />
+                <Feedbacks feedbacks={filteredFeedbacks} />
+              </div>
           }
         />
     </div>

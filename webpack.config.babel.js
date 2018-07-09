@@ -7,7 +7,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
     filename: "./index.html"
 });
 
-const vendor = ['react', 'react-dom', 'react-redux'];
+const vendor = ['react', 'react-dom'];
 
 export default {
     name: 'client',
