@@ -1,0 +1,26 @@
+@import '../../scss/variables/responsive';
+
+.Usabilla__dashboard {
+    background-color: #eef3f7;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    max-width: 120rem;
+    padding: 2rem 6rem;
+    min-height: 85vh;
+
+    @include on-narrow {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.Usabilla__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Usabilla__title {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}

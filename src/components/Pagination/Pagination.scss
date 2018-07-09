@@ -1,0 +1,31 @@
+@import '../../scss/variables/a11y';
+
+.Pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #eee;
+}
+
+.Pagination__button {
+    border: none;
+    font-size: 1.3rem;
+    background: none;
+    padding: 0 2rem;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+        @extend %outline;
+    }
+
+    &:disabled {
+        cursor: auto;
+        opacity: .4;
+    }
+}
+
+.Pagination__details {
+    width: 2rem;
+}

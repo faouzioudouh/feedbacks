@@ -1,0 +1,13 @@
+$breakpoint__narrow: 786px;
+  
+@mixin on-narrow {
+    @media screen and (max-width: $breakpoint__narrow - 1) {
+        @content;
+    }
+}
+ 
+@mixin on-medium-and-wide {
+    @media screen and (min-width: $breakpoint__narrow) {
+        @content;
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../scss/variables/a11y';
+
+.CircleBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #c6eff2;
+    background-color: #00a8c2;
+    border: 1px solid #d0d5da;
+
+    &:focus,
+    &:active,
+    &:focus-within {
+        @extend %outline;
+    }
+}
+
+.CircleBadge--inactive {
+    color: #d0d5da;
+    background-color: #f2f5f8;
+}

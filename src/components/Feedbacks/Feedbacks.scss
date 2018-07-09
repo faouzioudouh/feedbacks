@@ -1,0 +1,14 @@
+.Feedbacks {
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    background-color: white;
+}
+
+.Feedbacks__no-feedback {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

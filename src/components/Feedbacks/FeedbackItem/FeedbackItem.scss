@@ -1,0 +1,38 @@
+@import '../../../scss/variables/responsive';
+
+.FeedbackItem {
+    background-color: white;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #e2e4e4;
+    }
+}
+
+.FeedbackItem__Header {
+    color: #c6ced3;
+    background-color: #59636b;
+    justify-content: flex-start;
+}
+
+.FeedbackItem__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.FeedbackItem__cell {
+    flex: 1;
+    padding: 1.5rem;
+    color: #9ca1a1;
+
+    &:not(.FeedbackItem__cell--comment) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @include on-narrow {
+        padding: 1.5rem .5rem;
+    }
+}
