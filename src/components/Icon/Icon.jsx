@@ -3,7 +3,7 @@ import Types from '../../Types';
 import "./Icon.scss";
 
 /**
- * @description Icon renders a loading indicator (gif)!
+ * @desc Icon renders a loading indicator (gif)!
  * @param {React.Props<{}>} Props Expecting no props 
  * @returns {React.Component}
  */

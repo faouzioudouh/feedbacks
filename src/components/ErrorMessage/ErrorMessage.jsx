@@ -5,7 +5,7 @@ import Types from '../../Types';
 import "./ErrorMessage.scss";
 
 /**
- * @description ErrorMessage Component renders error message!
+ * @desc ErrorMessage Component renders error message!
  * @param {React.Props<Object>} Props 
  * @returns {React.Component}
  */

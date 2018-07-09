@@ -6,7 +6,7 @@ import RatingsFilter from './RatingsFilter/RatingsFilter';
 import "./FeedbacksFilter.scss";
 
 /**
- * @description FeedbacksFilter stateless component to create/edit a task!
+ * @desc FeedbacksFilter stateless component to create/edit a task!
  * @param {React.Props<Object>} Props 
  * @returns {React.Component}
  */

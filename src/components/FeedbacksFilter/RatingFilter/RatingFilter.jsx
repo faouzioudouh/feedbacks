@@ -6,7 +6,7 @@ import CircleBadge from '../../CircleBadge';
 import "./RatingFilter.scss";
 
 /**
- * @description RatingFilter stateless component to render the rating
+ * @desc RatingFilter stateless component to render the rating
  * label and checkbox to filter the feedbacks based on ratings values!
  * @param {React.Props<Object>} Props
  * @returns {React.Component}

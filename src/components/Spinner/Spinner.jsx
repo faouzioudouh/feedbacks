@@ -3,7 +3,7 @@ import Icon from '../Icon';
 import "./Spinner.scss";
 
 /**
- * @description Spinner renders a loading indicator!
+ * @desc Spinner renders a loading indicator!
  * @param {React.Props<{}>} Props Expecting no props 
  * @returns {React.Component}
  */

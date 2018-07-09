@@ -7,7 +7,7 @@ import Pagination from '../Pagination';
 import "./Feedbacks.scss";
 
 /**
- * @description Feedbacks renders list of FeedbackItem with header!
+ * @desc Feedbacks renders list of FeedbackItem with header!
  * @param {React.Props} Props
  * @returns {React.Component}
  */

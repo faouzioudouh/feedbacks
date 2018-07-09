@@ -5,7 +5,7 @@ import Types from '../../../Types';
 import "./FeedbackItem.scss";
 
 /**
- * @description FeedbackItem renders task item {title, isDone)!
+ * @desc FeedbackItem renders task item {title, isDone)!
  * @param {React.Props} Props
  * @returns {React.Component}
  */

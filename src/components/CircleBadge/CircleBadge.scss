@@ -1,4 +1,5 @@
 @import '../../scss/variables/a11y';
+@import '../../scss/variables/responsive';
 
 .CircleBadge {
     display: flex;
@@ -15,6 +16,11 @@
     &:active,
     &:focus-within {
         @extend %outline;
+    }
+
+    @include on-narrow {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
 

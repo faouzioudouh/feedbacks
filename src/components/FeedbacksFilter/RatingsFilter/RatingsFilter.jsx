@@ -24,7 +24,7 @@ const renderRatingsBadges = ({
 };
 
 /**
- * @description RatingsFilter stateless component to render the ratings
+ * @desc RatingsFilter stateless component to render the ratings
  * buttons to filter the feedbacks based on ratings values!
  * @param {React.Props<Object>} Props
  * @returns {React.Component}

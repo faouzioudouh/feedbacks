@@ -5,7 +5,7 @@ import CircleBadge from '../../CircleBadge';
 import { isMobile } from '../../../helpers';
 
 /**
- * @description renderBrowser renders browser and the virsion in a new line!
+ * @desc renderBrowser renders browser and the virsion in a new line!
  * @param {String} browser
  * @param {String} version
  * @returns {React.Component}
@@ -15,7 +15,7 @@ const renderBrowser = (browser, version) => {
 };
 
 /**
- * @description FeedbacksList renders list of FeedbackItem!
+ * @desc FeedbacksList renders list of FeedbackItem!
  * @param {React.Props} Props
  * @returns {React.Component}
  */

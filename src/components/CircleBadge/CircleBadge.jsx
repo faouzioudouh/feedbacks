@@ -5,7 +5,7 @@ import Types from '../../Types';
 import "./CircleBadge.scss";
 
 /**
- * @description CircleBadge renders a a circle shape with text!
+ * @desc CircleBadge renders a a circle shape with text!
  * @param {React.Props} Props
  * @returns {React.Component}
  */
