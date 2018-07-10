@@ -60,6 +60,7 @@ All the required points are there ;).
 
 - [x]   World Graph (Feedbacks and ratings average by country)
 - [x]   Pagination
+- [x]   The whole app is accessible, you can test it with voiceOver softwares (A11y)
 - [x]   Error handling
 - [x]   Api
 - [x]   More for you to explore...
